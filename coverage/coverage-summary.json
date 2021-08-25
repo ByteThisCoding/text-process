@@ -1,0 +1,3 @@
+{"total": {"lines":{"total":105,"covered":57,"skipped":0,"pct":54.29},"statements":{"total":105,"covered":57,"skipped":0,"pct":54.29},"functions":{"total":3,"covered":2,"skipped":0,"pct":66.67},"branches":{"total":15,"covered":14,"skipped":0,"pct":93.33}}
+,"C:\\SoftwareStuff\\Projects\\text-process\\src\\string-distance-calculator\\levenshtein-string-distance-calculator.ts": {"lines":{"total":105,"covered":57,"skipped":0,"pct":54.29},"functions":{"total":3,"covered":2,"skipped":0,"pct":66.67},"statements":{"total":105,"covered":57,"skipped":0,"pct":54.29},"branches":{"total":15,"covered":14,"skipped":0,"pct":93.33}}
+}
