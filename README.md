@@ -4,6 +4,8 @@ A library which provides functionality for reducing and processing words and phr
 * **Tokenizer:** reduce sentences to a list of stemmed words
 * **String Distance:** determine the edit distance between strings
 
+For more info on how to use + the concepts behind the implementation, please visit: https://bytethisstore.com/articles/pg/search-text-process
+
 ## Stemming
 Stemming is a process which converts a word into a common base form which may or may not be a word itself. For example:
 * running => run
