@@ -2,7 +2,7 @@
  * A "stop word" is a very commonly used word which may or may not contain meaning which is useful for processing
  * For searching, for example, it may be useful to remove these words before comparing a query to a document
  */
-export const STOP_WORDS = [
+export const STOP_WORDS_SET = new Set([
     "i",
     "me",
     "my",
@@ -130,4 +130,4 @@ export const STOP_WORDS = [
     "don",
     "should",
     "now",
-];
+]);
