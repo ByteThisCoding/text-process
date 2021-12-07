@@ -12,14 +12,29 @@ export class TextTokenizer implements iTextTokenizer {
      * Split a string into a list of word-like tokens which can be more easily processed by other services
      */
     tokenize(text: string): Set<string> {
-        return new Set(text
+        const set = new Set<string>();
+        this.splitText(text, (word: string) => set.add(word));
+        return set;
+    }
+
+    tokenizeMany(texts: string[]): Set<string> {
+        const set = new Set<string>();
+        texts.forEach(text => {
+            this.splitText(text, (word: string) => set.add(word));
+        });
+        return set;
+    }
+
+    private splitText(text: string, callback: (word: string) => void): void {
+        return text
             .replace(/(-|_|:)/g, " ")
             .replace(/[^0-9a-zA-Z\s]/g, "")
             .toLowerCase()
             .replace(/\s+/g, " ")
             .split(" ")
             .filter((word) => STOP_WORDS_SET.has(word))
-            .map((word) => this.stemmer.stemWord(word))
-        );
+            .forEach(word => callback(
+                this.stemmer.stemWord(word)
+            ));
     }
 }
