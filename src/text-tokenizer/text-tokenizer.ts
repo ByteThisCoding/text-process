@@ -32,7 +32,7 @@ export class TextTokenizer implements iTextTokenizer {
             .toLowerCase()
             .replace(/\s+/g, " ")
             .split(" ")
-            .filter((word) => STOP_WORDS_SET.has(word))
+            .filter((word) => !STOP_WORDS_SET.has(word))
             .forEach(word => callback(
                 this.stemmer.stemWord(word)
             ));
